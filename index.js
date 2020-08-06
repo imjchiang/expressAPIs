@@ -22,7 +22,12 @@ app.get("/", function(req, res)
     .then(function(response)
     {
         console.log(response.data);
-    });
+        res.render("home");
+    })
+    .catch(function(err)
+    {
+        console.log(err);
+    })
 });
 
 app.listen(3000);
