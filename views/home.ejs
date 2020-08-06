@@ -7,5 +7,14 @@
 </head>
 <body>
     <h1>Star Wars</h1>
+
+    <% episodes.forEach(function(episode)
+    { %>
+        <div>
+            <h2><%= episode.Title %> (<%= episode.Year %>)</h2>
+            <img src="<%= episode.Poster %>">
+        </div>
+    <% }) %> 
+
 </body>
 </html>
