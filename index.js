@@ -22,7 +22,10 @@ app.get("/", function(req, res)
     .then(function(response)
     {
         console.log(response.data);
-        res.render("home");
+        //setting a variable to our data
+        let episodes = response.data.Search;
+        //render home with the data
+        res.render("home", {episodes});
     })
     .catch(function(err)
     {
